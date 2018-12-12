@@ -1,0 +1,134 @@
+
+/* 
+    Created on : Dec 2, 2018, 12:58:18 AM
+    Author     : user
+*/
+.root{
+    -fx-background-color: #FFFFFF;
+}
+.label{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-weight: bold;
+    -fx-font-size: 15.0px;
+    -fx-text-fill: #0D70AB;
+}
+.text-field{
+    -fx-background-radius: 14;
+    -fx-font-family: "Comic Sans MS";
+}
+.button{
+    -fx-background-color: #0D70AB;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-background-radius: 16;
+    -fx-text-overrun: ellipsis;
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 15.0px;
+}
+.button-blue{
+    -fx-background-color: #7cafc2;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 4;
+    
+}
+#bold-label{
+    -fx-font-weight: bold;
+}
+.combo-box {
+    
+    -fx-border-radius: 13.0;
+    -fx-text-fill: #DDDDDD;
+    -fx-background-radius: 13.0;
+    -fx-background-color: #0D70AB;
+    -fx-font-family: "Comic Sans MS";
+    -fx-prompt-text-fill: #aaaaaa;
+}
+.combo-box .cell
+ {
+    /*-fx-font-family: arial;*/
+    -fx-border-radius: 13.0;
+    -fx-text-fill: #DDDDDD;
+    -fx-background-radius: 13.0;
+    -fx-background-color: #0D70AB;
+    -fx-font-family: "Comic Sans MS";
+    -fx-prompt-text-fill: #aaaaaa;
+ }
+ 
+/*******************************************************************************
+ *                                                                             *
+ * TableView                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+ 
+.table-view {
+    -fx-base: #FFFFFF;
+    -fx-control-inner-background: #FFFFFF;
+    /*#1d1d1d*/
+    -fx-table-cell-border-color: #DDDDDD;
+    -fx-border-radius:  10;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 0.0;
+    
+}
+ 
+.table-view:focused {
+    -fx-background-insets: 0.0;
+    /*-fx-background-radius: 13.0;*/
+    -fx-border-radius:  10;
+    -fx-padding: 0.0;
+}
+ 
+.table-view .column-header {
+    -fx-size: 30.0;
+    -fx-border-width: 0.0 0.0 1.0 0.0;
+    /*-fx-background-radius: 13.0;*/
+    -fx-border-radius:  10;
+}
+ 
+.table-view .column-header .label {
+    -fx-font-family: "Comic Sans MS";
+    -fx-text-fill: #0D70AB;
+        /*-fx-font-weight: light;*/
+        -fx-font-size: 13.0px;
+        /*-fx-background-radius: 13.0;*/
+        /*-fx-border-radius:  10;*/
+}
+ 
+.table-cell {
+    -fx-padding: 0.166667em; /* 2px, plus border adds 1px */
+    /*-fx-border-radius:  10;*/
+    -fx-background-color: transparent;
+    -fx-border-color: transparent -fx-table-cell-border-color transparent transparent;
+    -fx-border-width: 0.083333em; /* 1 */
+    -fx-cell-size: 2.0em; /* 24 */
+    -fx-text-fill: -fx-text-inner-color;
+    -fx-font-family: "Comic Sans Ms";
+}
+ 
+ 
+/* angeklickte Zelle auf die kein fokus besteht : aber fokus auf tabelle ?? */
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell > .table-cell:focused,
+.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell > .tree-table-cell:focused {
+    -fx-background-color: -fx-focus-color, -fx-cell-focus-inner-border, -fx-control-inner-background;
+    -fx-background-insets: 0.0 1.0 0.0 0.0, 1.0 2.0 1.0 1.0, 2.0 3.0 2.0 2.0;
+}
+ 
+ /* bei anklicken einer Zelle */
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell:filled .table-cell:focused:selected,
+.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled .tree-table-cell:focused:selected {
+   -fx-background-color: -fx-focus-color, -fx-cell-focus-inner-border, -fx-selection-bar;
+    -fx-background-insets: 0.0 1.0 0.0 0.0, 1.0 2.0 1.0 1.0, 2.0 3.0 2.0 2.0;
+    -fx-background: -fx-accent;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+ 
+/* When the TableView is _not_ focused, we show alternate selection colors */
+ .table-row-cell:filled > .table-cell:selected:focused,
+ .table-row-cell:filled > .table-cell:selected,
+ .tree-table-row-cell:filled > .tree-table-cell:selected:focused,
+ .tree-table-row-cell:filled > .tree-table-cell:selected {
+    -fx-background-color: -fx-focus-color, -fx-cell-focus-inner-border, -fx-control-inner-background;
+    -fx-background-insets: 0.0 1.0 0.0 0.0, 1.0 2.0 1.0 1.0, 2.0 3.0 2.0 2.0;
+    -fx-table-cell-border-color: #242424;
+}
+
